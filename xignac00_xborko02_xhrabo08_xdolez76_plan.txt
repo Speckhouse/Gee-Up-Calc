@@ -1,0 +1,50 @@
+# Gee-Up-Calc
+GUI calculator for an IVS project.
+
+## TODO
+* Kazdy ma vytvorit Doxyfile a potom porovnat (pridajte do repozitara Doxyfile-meno)
+
+|                    |         |
+| --- | --- |
+| *komunikacia*      | jabber! |
+| *framework*        | pyQT    |
+| *verzie a hosting* | github  |
+
+## Rozdelenie uloh
+Oblast   | Kto           | Datum do  | Stav
+-------- | ------------- | --------- | ---
+GUI      | Vasek, Michal | 21.3.2017 |
+Knihovna | Simeon        | 24.3.2017 |
+Testy    | Igor          | 21.3.2017 |
+
+## Interface knihovny *mathlib.py*
+| Nazov                            | Funkcia   | Poznamka        |
+| -------------------------------- | --------- | --------------- |
+| float add(float a, float b)      | a + b     |                 |
+| float subtract(float a, float b) | a - b     |                 |
+| float multiply(float a, float b) | a * b     |                 |
+| float divide(float a, float b)   | a / b     |                 |
+| float factorial(float a)         | a!        |                 |
+| float power(float a, float b)    | a^b       | b je prirodzene |
+| float root(float a, float b)     | a^(1/b)   | b je realne     |
+| float logn(float a)              | log(e)(a) |                 |
+
+## Pristup do repozitara pre vyucujucich
+* Pristup je mozny pomocou githubu, opravnenia su pridelene uctu ivs.kontrola@gmail.com
+
+## Prostredie 
+* Ubuntu 32bit
+* Ubuntu 64bit
+
+## Licenia 
+* GNU General Public License
+
+## Autori
+
+Gee Up
+* xignac00 Ignác Igor
+* xborko02 Borko Simeon
+* xhrabo08 Hrabovský Michal
+* xdolez76 Doležal Václav, Bc.
+
+

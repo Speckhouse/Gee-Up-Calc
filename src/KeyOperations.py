@@ -1,14 +1,18 @@
 from KeyEnum import KeyEnum
+import sys
+
+sys.path.extend(['.','..'])
+import mathlib
 
 _unary = {
     KeyEnum.EQUALS: None,
 }
 
 _binary = {
-    KeyEnum.PLUS: None,
-    KeyEnum.MINUS: None,
-    KeyEnum.MULTIPLICATION: None,
-    KeyEnum.DIVISION: None,
+    KeyEnum.PLUS: mathlib.add,
+    KeyEnum.MINUS: mathlib.subtract,
+    KeyEnum.MULTIPLICATION: mathlib.multiply,
+    KeyEnum.DIVISION: mathlib.divide,
 }
 
 def getfn(key):

@@ -54,7 +54,7 @@ class Calculator(QWidget):
         
         self.mpad = Mathpad(self.EventHandlerForward)
         self.mpad.setSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.MinimumExpanding)
-        grid.addWidget(self.mpad,4,5,3,2)
+        grid.addWidget(self.mpad,4,5,4,2)
 
         self.setLayout(grid)
 

@@ -6,4 +6,8 @@ class KeyEnum(Enum):
         MINUS = 12
         MULTIPLICATION = 13
         DIVISION = 14
-        EQUALS = 15
+        POWER = 15
+        ROOT = 16
+        EQUALS = 17
+        FACTORIAL = 18
+        LOGN = 19

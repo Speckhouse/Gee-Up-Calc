@@ -1,7 +1,7 @@
 import sys
 import PyQt5
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QGridLayout, QSizePolicy, QLineEdit)
+from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QGridLayout, QSizePolicy, QLineEdit, QMessageBox)
 from PyQt5.QtGui import QIcon
 from functools import partial
 from KeyEnum import KeyEnum
@@ -21,7 +21,19 @@ class Calculator(QWidget):
     mpad = None
     ## @var lineedit
     # @brief QLineEdit widget
-    lineedit = None 
+    lineedit = None
+    ## @var helplabel
+    # @brief help title
+    helptitle = "Nápoveda"
+    ## @var helptext
+    # @brief help message
+    helptext = """Táto kalkulačka poskytuje binárne a unárne operácie.
+
+Binárne operácie: +, -, *, /, prirodzená mocnina a všeobecná odmocnina.
+Zadajte číslo, stlačte tlačidlo operácie, zadajte druhé číslo a stlačte tlačidlo =.
+
+Unárne operácie: Faktoriál a prirodzený logaritmus.
+Zadajte číslo a stlačte tlačidlo operácie."""
     
     ## @brief the constructor
     # @param self Object pointer
@@ -56,8 +68,21 @@ class Calculator(QWidget):
         self.mpad = Mathpad(self.EventHandlerForward)
         self.mpad.setSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.MinimumExpanding)
         grid.addWidget(self.mpad,4,5,4,2)
+        
+        button = QPushButton(self.helptitle)
+        button.clicked.connect(self.HelpHandler)
+        grid.addWidget(button,8,1)
 
         self.setLayout(grid)
+    
+    ## @brief Function that handles OnClick events of Help Button
+    # @param self Object pointer
+    def HelpHandler(self):
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Information)
+        msg.setText(self.helptext)
+        msg.setWindowTitle(self.helptitle)
+        retval = msg.exec_()
 
     ## @brief Function that forwards OnClick events of buttons to Kalkulacka.eventhandler 
     # @param self Object pointer

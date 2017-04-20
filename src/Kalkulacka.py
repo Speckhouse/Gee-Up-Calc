@@ -6,6 +6,7 @@ from functools import partial
 from KeyEnum import KeyEnum
 from Numpad import Numpad
 from Mathpad import Mathpad
+from CalcLogic import CalcLogic
 
 class Calculator(QWidget):
     ## @var eventhandler
@@ -69,8 +70,10 @@ class Calculator(QWidget):
     def setText(self,text):
         self.lineedit.setText(text)
 
+logic = CalcLogic()
+
 def f(kalkulacka,i):
-    kalkulacka.setText(str(i))
+    kalkulacka.setText(logic.getkey(i))
 
 app = QApplication(sys.argv)
 

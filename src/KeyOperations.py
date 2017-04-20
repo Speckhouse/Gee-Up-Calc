@@ -1,9 +1,5 @@
 from KeyEnum import KeyEnum
-import sys
-
-sys.path.extend(['.','..'])
 import mathlib
-
 
 _unary = {
     KeyEnum.EQUALS: None,

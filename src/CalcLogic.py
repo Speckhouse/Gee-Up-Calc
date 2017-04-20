@@ -29,7 +29,10 @@ class CalcLogic(object):
                 self.string = self.string + str(key)
                 return self.string
             elif KeyEnum(key) == KeyEnum.DOT:
-                self.string = self.string + '.'
+                if not self.string:
+                    self.string = '0.'
+                elif not '.' in self.string:
+                    self.string = self.string + '.'
                 return self.string
             elif KeyOperations.binary(key):
                 self.evaluate()

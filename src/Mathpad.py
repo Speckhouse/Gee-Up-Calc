@@ -45,11 +45,29 @@ class Mathpad(QWidget):
         button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
         button.clicked.connect(partial(self.EventHandlerForward,KeyEnum.DIVISION.value))
         grid.addWidget(button,2,2)
+        
+        button = QPushButton('a^n')
+        button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        button.clicked.connect(partial(self.EventHandlerForward,KeyEnum.POWER.value))
+        grid.addWidget(button,3,1)
+        button = QPushButton('a^(1/b)')
+        button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        button.clicked.connect(partial(self.EventHandlerForward,KeyEnum.ROOT.value))
+        grid.addWidget(button,3,2)
 
         button = QPushButton('=')
         button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
         button.clicked.connect(partial(self.EventHandlerForward,KeyEnum.EQUALS.value))
-        grid.addWidget(button,3,1,1,2)
+        grid.addWidget(button,4,1,1,2)
+        
+        button = QPushButton('!')
+        button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        button.clicked.connect(partial(self.EventHandlerForward,KeyEnum.FACTORIAL.value))
+        grid.addWidget(button,5,1)
+        button = QPushButton('logN')
+        button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        button.clicked.connect(partial(self.EventHandlerForward,KeyEnum.LOGN.value))
+        grid.addWidget(button,5,2)
         
         self.setLayout(grid)
 

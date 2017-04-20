@@ -2,6 +2,7 @@ import sys
 import PyQt5
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QGridLayout, QSizePolicy, QLineEdit)
+from PyQt5.QtGui import QIcon
 from functools import partial
 from KeyEnum import KeyEnum
 from Numpad import Numpad
@@ -31,7 +32,7 @@ class Calculator(QWidget):
     # @param height Height of the widget
     # @param parnt Parent of the widget
     def __init__(self, func, offsetx=None, offsety=None, width=None, height=None, parent = None):
-        super().__init__(parent);
+        super().__init__(parent)
 
         self.eventhandler = func
 
@@ -54,7 +55,7 @@ class Calculator(QWidget):
         
         self.mpad = Mathpad(self.EventHandlerForward)
         self.mpad.setSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.MinimumExpanding)
-        grid.addWidget(self.mpad,4,5,3,2)
+        grid.addWidget(self.mpad,4,5,4,2)
 
         self.setLayout(grid)
 
@@ -78,7 +79,8 @@ def f(kalkulacka,i):
 app = QApplication(sys.argv)
 
 w = Calculator(f)
-w.setWindowTitle('poop2')
+w.setWindowTitle('Gee Up Calc')
+w.setWindowIcon(QIcon('geeupcalc_icon.png'))
 w.show()
 
 sys.exit(app.exec_())

@@ -4,8 +4,11 @@ import sys
 sys.path.extend(['.','..'])
 import mathlib
 
+
 _unary = {
     KeyEnum.EQUALS: None,
+    KeyEnum.FACTORIAL: mathlib.factorial,
+    KeyEnum.LOGN: mathlib.logn,
 }
 
 _binary = {
@@ -13,6 +16,8 @@ _binary = {
     KeyEnum.MINUS: mathlib.subtract,
     KeyEnum.MULTIPLICATION: mathlib.multiply,
     KeyEnum.DIVISION: mathlib.divide,
+    KeyEnum.POWER: mathlib.power,
+    KeyEnum.ROOT: mathlib.root,
 }
 
 def getfn(key):

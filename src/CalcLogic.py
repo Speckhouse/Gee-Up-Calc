@@ -18,6 +18,10 @@ class CalcLogic(object):
             if self.pending_op:
                 self.number1 = self.pending_op(self.number1, self.number1)
 
+    def evaluate_unary(self, op):
+        if op:
+            self.number1 = op(self.number1)
+        self.string = ""
 
     def getkey(self, key):
         if key < 10:
@@ -32,7 +36,6 @@ class CalcLogic(object):
             return str(self.number1)
         elif KeyOperations.unary(key):
             self.evaluate()
-            self.pending_op = KeyOperations.getfn(key)
-            self.evaluate()
+            self.evaluate_unary(KeyOperations.getfn(key))
             self.pending_op = None
             return str(self.number1)

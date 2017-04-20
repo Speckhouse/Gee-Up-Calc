@@ -14,9 +14,6 @@ class CalcLogic(object):
             else:
                 self.number1 = float(self.string)
             self.string = ""
-        else:
-            if self.pending_op:
-                self.number1 = self.pending_op(self.number1, self.number1)
 
     def evaluate_unary(self, op):
         if op:

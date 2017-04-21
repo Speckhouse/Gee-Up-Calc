@@ -1,0 +1,5 @@
+xborko02 100 (matematická knihovna, profiling, debugging, dokumentace)
+xdolez76 100 (GUI, Makefile, instalátor, dokumentace)
+xhrabo08 100 (GUI, instalátor, dokumentace)
+xignac00 100 (testy, mock-up, profiling, dokumentace)
+

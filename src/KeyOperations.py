@@ -1,6 +1,7 @@
 ##
 # @file KeyOperations.py
 # @brief Module mapping buttons to their respective operations
+# @author Václav Doležal xdolez76@stud.fit.vutbr.cz
 #
 
 from KeyEnum import KeyEnum

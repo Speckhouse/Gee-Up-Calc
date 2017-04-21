@@ -9,15 +9,14 @@ from KeyEnum import KeyEnum
 import KeyOperations
 
 ##
-# @class CalcLogic
 # @brief State and behavior of calculator
 #
 class CalcLogic(object):
-    ##
+    ## Stored result
     number1 = 0
-    ##
+    ## Input
     string = ""
-    ##
+    ## pending binary operation (function)
     pending_op = None
 
     ##

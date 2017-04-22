@@ -1,4 +1,5 @@
 import sys
+import os
 import PyQt5
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QGridLayout, QSizePolicy, QLineEdit, QMessageBox)
@@ -105,7 +106,7 @@ app = QApplication(sys.argv)
 
 w = Calculator(f)
 w.setWindowTitle('Gee Up Calc')
-w.setWindowIcon(QIcon('geeupcalc_icon.png'))
+w.setWindowIcon(QIcon(os.path.dirname(os.path.realpath(__file__)) + '/geeupcalc_icon.png'))
 w.show()
 
 sys.exit(app.exec_())

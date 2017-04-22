@@ -1,0 +1,70 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+
+\title{Gee Up Calc}
+\author{Simeon Borko}
+\begin{document}
+\maketitle
+
+\section{Úvod}
+
+\textit{Gee Up Calc} je kalkulačka s týmito operáciami:
+\begin{itemize}
+  \item +
+  \item -
+  \item *
+  \item /
+  \item prirodzená mocnina
+  \item všeobecná odmocnina
+  \item faktoriál
+  \item prirodzený logaritmus
+\end{itemize}
+
+\section{Deb balíček}
+
+Inštalácia: \texttt{sudo dpkg -i geeupcalc.deb} \\
+Odinštalácia: \texttt{sudo dpkg -r geeupcalc.deb}
+
+\section{Manuálna (od)inštalácia}
+Ak nechcete využiť inštaláciu pomocou deb balíčku, využite tento postup:
+
+\subsection{Závislosti}
+Pred inštaláciou aplikácie je potrebné nainštalovať python3.5 a modul PyQt5 spustením príkazov:
+\texttt{sudo apt install python3.5 python3-pip \\
+sudo pip3 install PyQt5}
+
+\subsection{Inštalácia}
+Z priečinku aplikácie zadajte tieto príkazy: \\
+\texttt{sudo mkdir /opt/GeeUpCalc \\
+sudo cp -r * /opt/GeeUpCalc}
+
+Aby ste vytvorili položku v menu, vytvorte súbor \\
+\texttt{~/.local/share/applications/geeupcalc.desktop} \\
+a vložte doňho tento obsah:
+
+\begin{verbatim}
+[Desktop Entry]
+Encoding=UTF-8
+Name=Gee Up Calc
+Comment=Kalkulacka s odmocninou a prirodzenym logaritmom
+Exec=python3.5 /opt/GeeUpCalc/src/Kalkulacka.py
+Icon=/opt/GeeUpCalc/src/geeupcalc_icon.png
+Categories=Utility;Calculator;
+Version=1.0
+Type=Application
+Terminal=0
+\end{verbatim}
+
+A nakoniec vytvorte zástupcu na ploche: \\
+\texttt{cp ~/.local/share/applications/geeupcalc.desktop `xdg-user-dir DESKTOP`}
+
+\subsection{Odinštalácia}
+
+Aplikáciu odstránite takto:
+\begin{verbatim}
+sudo rm -r /opt/GeeUpCalc/
+rm ~/.local/share/applications/geeupcalc.desktop
+rm `xdg-user-dir DESKTOP`/geeupcalc.desktop
+\end{verbatim}
+
+\end{document}

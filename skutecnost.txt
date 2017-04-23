@@ -1,0 +1,7 @@
+- Datum vyhradeny na odovzdanie matematicke kniznice 24.3
+- Pridanie 4.4
+- Zvysne ustanovene datumy sa prisposobili tomuto casovemu posunu. 
+- Tento posun nesposobil ziaden problem pri vyvoji programu, stale bola pritomna velka casova   	  rezerva. 
+- Vramci planu, kazdy clen dodrzal a odviedol jemu stanovenu ulohu 
+
+

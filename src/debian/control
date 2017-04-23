@@ -1,0 +1,13 @@
+Source: gee-up-calc
+Section: misc
+Priority: optional
+Maintainer: Václav Doležal <fire256@seznam.cz>
+Build-Depends: debhelper (>= 10), dh-python, python-all, doxygen
+Standards-Version: 3.9.8
+Homepage: https://github.com/Speckhouse/Gee-Up-Calc/
+
+Package: gee-up-calc
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}
+Description: Simple calculator
+ Simple calculator for school project.

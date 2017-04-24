@@ -2,3 +2,5 @@ html/
 __pycache__/
 *.pyc
 .idea/
+src/debian/deb
+src/debian/*.deb

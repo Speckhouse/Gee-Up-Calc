@@ -62,7 +62,7 @@ install: GeeUp-GeeUpCalc.desktop
 	install -m 755 -D -t $(DESTDIR)$(prefix)/lib/ $(py_exec)
 	install -m 644 -D -t $(DESTDIR)$(prefix)/lib/ $(py_lib) geeupcalc_icon.png
 	install -d $(DESTDIR)$(prefix)/doc/
-	cp -r -t $(DESTDIR)$(prefix)/doc/ html/ ../README.md ../user_guide.pdf
+	cp -r -t $(DESTDIR)$(prefix)/doc/ html/ ../README.md ../dokumentace.pdf
 ifdef DESTDIR
 	install -m 644 -D -t $(DESTDIR)/usr/share/applications $(desktop_file)
 else

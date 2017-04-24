@@ -4,8 +4,8 @@ deb_name=geeupcalc
 
 .PHONY: deb
 deb:
-	install -D -t deb/DEBIAN control
-	install -D -t deb/usr/share/doc/$(deb_name) changelog copyright
+	install -m 644 -D -t deb/DEBIAN control
+	install -m 644 -D -t deb/usr/share/doc/$(deb_name) changelog copyright
 	make -C .. DESTDIR=$(realpath .)/deb install
 	fakeroot dpkg-deb -b deb $(deb_name).deb
 

@@ -4,3 +4,4 @@ __pycache__/
 .idea/
 src/debian/deb
 src/debian/*.deb
+src/GeeUp-GeeUpCalc.desktop
